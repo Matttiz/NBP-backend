@@ -1,0 +1,8 @@
+2025-01-10 11:41:30 [main] INFO  nbp.pl.steps.ExchangeRatesSteps - Kod odpowiedzi z API NBP: 200
+2025-01-10 11:41:30 [main] INFO  nbp.pl.steps.ExchangeRatesSteps - RESPONSE
+2025-01-10 11:41:30 [main] INFO  nbp.pl.steps.ExchangeRatesSteps - io.restassured.internal.RestAssuredResponseImpl@1de4285e
+2025-01-10 11:47:28 [main] INFO  nbp.pl.steps.ExchangeRatesSteps - RESPONSE
+2025-01-10 11:47:29 [main] INFO  nbp.pl.steps.ExchangeRatesSteps - Pobrano 33 kursów.
+2025-01-10 11:47:29 [main] INFO  nbp.pl.steps.ExchangeRatesSteps - Kurs dla waluty USD wynosi: 4.1523
+2025-01-10 11:47:29 [main] INFO  nbp.pl.steps.ExchangeRatesSteps - Kurs dla waluty dolar amerykański wynosi: 4.1523
+2025-01-10 11:47:29 [main] INFO  nbp.pl.steps.ExchangeRatesSteps - Waluty o kursie powyżej 5.0:
