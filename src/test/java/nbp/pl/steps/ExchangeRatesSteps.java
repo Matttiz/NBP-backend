@@ -25,13 +25,12 @@ public class ExchangeRatesSteps {
                     .given()
                     .baseUri("http://api.nbp.pl")
                     .basePath("/api/exchangerates/tables/A")
-                    .when()
                     .get();
 
             log.info("Kod odpowiedzi z API NBP: " + response.getStatusCode());
             assertEquals(HttpStatus.SC_OK, response.getStatusCode());
             List<Rate> rates = response.jsonPath().getList("[0].rates", Rate.class);
-            log.info("Pobrano " + rates.size() + " kursów.");
+            log.info("Pobrano " + rates.size() + " kursy.");
             cachedRates = rates;
         }
     }
@@ -71,7 +70,7 @@ public class ExchangeRatesSteps {
         if (!above.isEmpty()) {
             log.info("Waluty o kursie powyżej " + threshold + ":");
             above.forEach(rate ->
-                    System.out.println(rate.getCurrency() + " (" + rate.getCode() + "): " + rate.getMid())
+                    log.info(rate.getCurrency() + " (" + rate.getCode() + "): " + rate.getMid())
             );
         } else {
             log.info("Brak walut o kursie powyżej " + threshold);
@@ -85,9 +84,9 @@ public class ExchangeRatesSteps {
                 .toList();
 
         if (!below.isEmpty()) {
-            System.out.println("Waluty o kursie poniżej " + threshold + ":");
+            log.info("Waluty o kursie poniżej " + threshold + ":");
             below.forEach(rate ->
-                    System.out.println(rate.getCurrency() + " (" + rate.getCode() + "): " + rate.getMid())
+                    log.info(rate.getCurrency() + " (" + rate.getCode() + "): " + rate.getMid())
             );
         } else {
             log.info("Brak walut o kursie poniżej " + threshold);

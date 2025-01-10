@@ -1,21 +1,14 @@
 package nbp.pl.model;
 
+import lombok.Getter;
+
 public class Rate {
+    @Getter
     private String currency;
+    @Getter
     private String code;
+    @Getter
     private double mid;
-
-    public String getCurrency() {
-        return currency;
-    }
-
-    public String getCode() {
-        return code;
-    }
-
-    public double getMid() {
-        return mid;
-    }
 
     @Override
     public String toString() {
